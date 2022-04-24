@@ -9,11 +9,17 @@ client = discord.Client()
 async def on_ready():
   print('We are logged in as {0.user}'.format(client))
 
+
 @client.event
 
 async def on_message(message):
+
+  #Questions and answers upon $help
+  
   async def adminquery():
     await message.channel.send("Congratulations you have reached Admin query portal. Here are a list of FAQs that might be similar to your question:\n")
+
+  #questions
     await message.channel.send("*$1a* Am I eligible to join AccioJob \n*$1b* What's the minimum educational qualification to join the course? \n*$1c* When will I get joining details of my Batch?"
     )
     
@@ -28,6 +34,8 @@ async def on_message(message):
   if message.author == client.user:
     return
   
+  #answers
+    
   if "$help" in message.content:
     await message.channel.send("How can I help you?\n*$1* - Admin query\n*$2* - course query\n*$3* - Interview based query\n*$4* - Coding Query" )
     
@@ -38,10 +46,10 @@ async def on_message(message):
     await message.channel.send("> You need to be a 2023 graduate or earlier to apply for AccioJob. You will be eligible for Pay after placement offer if you are a graduate between 2018 and 2023. You will be applicable for payupfront option if you are 2017 graduate or earlier.")
 
   if "$1b"==message.content:
-    await message.channel.send("> You need to be a 2023 graduate to be eligible to join the course.")
+    await message.channel.send("> You need to be a 2023 graduate or earlier to be eligible to join the course.")
     
   if "$1c"==message.content:
-    await message.channel.send("> You will receive the joining details of your batch 1 day before your batch starts.")
+    await message.channel.send("> You will receive the joining details of your batch one day before your batch starts.")
 
   if "$2"==message.content:
     await coursequery()
@@ -53,7 +61,7 @@ async def on_message(message):
     await message.channel.send("> The next batch is starting on April 25th.")
 
   if "$2c"==message.content:
-    await message.channel.send("> Terms and conditions are straight forward. We have a 12 month agreement with the student. Training goes on for the first 6 months. Placements start from the 3rd month onwards and go on till the 12th month. The student pays the course fees only after they get placed above 5 LPA during these 12 months.")
+    await message.channel.send("> Terms and conditions are straight forward. We have a 12 month agreement with the student. Training goes on for the first 6 months. Placements start from the 3rd month onwards and goes on till the 12th month. The student starts paying only after they get placed above 5 LPA during these 12 months.")
 
   if "$2d"==message.content:
     await message.channel.send("> You can use any language to solve the modules and further in the interview also but the course we have is in Java so you would have to work your skills in Java once you get selected.")
@@ -79,6 +87,52 @@ async def on_message(message):
   if "$4"==message.content:
     await message.channel.send("Your question will be solved shortly by a human!")
 
+  #keyword trigger based response
+
+  msg_text = message.content.strip().lower()
+
+  keyword_1 = ['interview', 'time']
+  keyword_2 = ['coding', 'test', 'chances']
+  keyword_3 = ['eligible', 'join']
+  keyword_4 = ['minimum', 'join', 'qualification']
+  keyword_5 = ['when', 'joining', 'batch']
+  keyword_6 = ['duration', 'course']
+  keyword_7 = ['batch', 'next', 'starting']
+  keyword_8 = ['what', 'isa']
+  keyword_9 = ['solve', 'language']
+  keyword_10 = ['join', 'without', 'clearing']
+  keyword_11 = ['grade', 'gap', 'grades', 'mechanical', 'electrical', 'civil']
+  keyword_12 = ['placement', 'other', 'pay']
+  keyword_13 = ['what', 'timings']
+  keyword_14 = ['not', 'receive', 'mail']
+  if all(word in msg_text for word in keyword_1):
+    await message.channel.send("> Your will receive a call within 48 hours of booking your interview on the website. If you have not, then you can then ping the staff here!")
+  if all(word in msg_text for word in keyword_2):
+    await message.channel.send("> Do not worry if you fail the coding test. We do not have any limit for the number of attempts. You will be able to re-attempt it after 7 days time until you pass it.")
+  if all(word in msg_text for word in keyword_3):
+    await message.channel.send("> You need to be a 2023 graduate or earlier to apply for AccioJob. You will be eligible for Pay after placement offer if you are a graduate between 2018 and 2023. You will be applicable for payupfront option if you are 2017 graduate or earlier.")
+  if all(word in msg_text for word in keyword_4):
+    await message.channel.send("> You need to be a 2023 graduate or earlier to be eligible to join the course.")
+  if all(word in msg_text for word in keyword_5):
+    await message.channel.send("> You will receive the joining details of your batch one day before your batch starts.")
+  if all(word in msg_text for word in keyword_6):
+    await message.channel.send("> The course duration is 6 months.")
+  if all(word in msg_text for word in keyword_7):
+    await message.channel.send("> The next batch is starting on April 25th.")
+  if all(word in msg_text for word in keyword_8):
+    await message.channel.send("> Terms and conditions are straight forward. We have a 12 month agreement with the student. Training goes on for the first 6 months. Placements start from the 3rd month onwards and goes on till the 12th month. The student starts paying only after they get placed above 5 LPA during these 12 months.")
+  if all(word in msg_text for word in keyword_9):
+    await message.channel.send("> You can use any language to solve the modules and further in the interview also but the course we have is in Java so you would have to work your skills in Java once you get selected.")
+  if all(word in msg_text for word in keyword_10):
+    await message.channel.send("> You can pay the fee upfront if you don't want to clear the tests.")
+  if any(word in msg_text for word in keyword_11):
+    await message.channel.send("> No, it will not matter for course joining or even for placements. Companies coming for placement only look for your coding skills, which we, here a AccioJob teach you!")
+  if all(word in msg_text for word in keyword_12):
+    await message.channel.send("> Once you start the course with us and sign the ISA, you will have to pay us the course fee when you get placed in IT sector above 5 LPA, regardless of how you get placed.")
+  if all(word in msg_text for word in keyword_13):
+    await message.channel.send("> The timings for live classes are from 8 PM to 11 PM on weekdays. You will have to put in 2-3 hours of extra effort to get your assignment and learning done everyday. And we have soft skills practice sessions, contests and profile building on weekends.")
+  if all(word in msg_text for word in keyword_14):
+    await message.channel.send("> Please check your spam folder for the email. If you have still not received the email then you can ping a staff member here with your email ID.")
 
 keep_alive()
 client.run(os.getenv('token'))
