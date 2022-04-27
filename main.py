@@ -91,8 +91,9 @@ async def on_message(message):
 
   msg_text = message.content.strip().lower()
 
-  keyword_1 = ['interview', 'time']
-  keyword_2 = ['coding', 'test', 'chances']
+  keyword_1 = ['interview', 'when']
+  keyword_1a = ['interview', 'what', 'time']
+  keyword_2 = ['coding', 'test', 'times']
   keyword_3 = ['eligible', 'join']
   keyword_4 = ['minimum', 'join', 'qualification']
   keyword_5 = ['when', 'joining', 'batch']
@@ -102,10 +103,16 @@ async def on_message(message):
   keyword_9 = ['solve', 'language']
   keyword_10 = ['join', 'without', 'clearing']
   keyword_11 = ['grade', 'gap', 'grades', 'mechanical', 'electrical', 'civil']
-  keyword_12 = ['placement', 'other', 'pay']
+  keyword_12 = ['placed', 'other', 'pay']
   keyword_13 = ['what', 'timings']
-  keyword_14 = ['not', 'receive', 'mail']
+  keyword_14 = ['given', 'interview', 'result']
+  keyword_15 = ['commit', 'hours']
+  keyword_16 = ['registration', 'fees']
+  keyword_17 = ['practice', 'coding test']
+  keyword_18 = ['coding test', 'difficult']
   if all(word in msg_text for word in keyword_1):
+    await message.channel.send("> Your will receive a call within 48 hours of booking your interview on the website. If you have not, then you can then ping the staff here!")
+  if all(word in msg_text for word in keyword_1a):
     await message.channel.send("> Your will receive a call within 48 hours of booking your interview on the website. If you have not, then you can then ping the staff here!")
   if all(word in msg_text for word in keyword_2):
     await message.channel.send("> Do not worry if you fail the coding test. We do not have any limit for the number of attempts. You will be able to re-attempt it after 7 days time until you pass it.")
@@ -118,7 +125,7 @@ async def on_message(message):
   if all(word in msg_text for word in keyword_6):
     await message.channel.send("> The course duration is 6 months.")
   if all(word in msg_text for word in keyword_7):
-    await message.channel.send("> The next batch is starting on April 25th.")
+    await message.channel.send("> The next batch is starting on May 19th!")
   if all(word in msg_text for word in keyword_8):
     await message.channel.send("> Terms and conditions are straight forward. We have a 12 month agreement with the student. Training goes on for the first 6 months. Placements start from the 3rd month onwards and goes on till the 12th month. The student starts paying only after they get placed above 5 LPA during these 12 months.")
   if all(word in msg_text for word in keyword_9):
@@ -133,6 +140,14 @@ async def on_message(message):
     await message.channel.send("> The timings for live classes are from 8 PM to 11 PM on weekdays. You will have to put in 2-3 hours of extra effort to get your assignment and learning done everyday. And we have soft skills practice sessions, contests and profile building on weekends.")
   if all(word in msg_text for word in keyword_14):
     await message.channel.send("> Please check your spam folder for the email. If you have still not received the email then you can ping a staff member here with your email ID.")
+  if all(word in msg_text for word in keyword_15):
+    await message.channel.send("> You will need to spend at least 5-6 hours per day throughout the duration of the course.")
+  if all(word in msg_text for word in keyword_16):
+    await message.channel.send("> You have two options for joining the course.If you are a graduate between 2018 and 2023, you will be eligible to join our batch by the Pay after placement option. If you are a 2017 or earlier graduate then you will have to go with the pay upfront option. The registration fee for pay upfront option is Rs. 4,999. Whereas there is no registration fee for the pay after placement option.")
+  if all(word in msg_text for word in keyword_17):
+    await message.channel.send("> If you have completed all the modules thoroughly and written programs on your own then you will be able to clear the coding test fairly well! If you want more practice questions then you can refer to this link https://expensive-amount-815.notion.site/Further-Practice-Questions-AccioJob-Modules-93a32105a2d8496fb35149e7ef9216f8 and you can even practice more on Hackerrank/Leetcode.")
+  if all(word in msg_text for word in keyword_18):
+    await message.channel.send("> If you have solved all module questions thoroughly and practiced some more questions on your own then you should be able to clear the coding test!")
 
 keep_alive()
 client.run(os.getenv('token'))
