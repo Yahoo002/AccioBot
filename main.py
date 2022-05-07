@@ -14,6 +14,15 @@ async def on_ready():
 
 async def on_message(message):
 
+  #ignores the following channels
+
+  if message.channel.id == 968901761463091232: #imp announcements in precourse
+    return
+  if message.channel.id == 968901761463091233: #session links in precourse
+    return
+  if message.channel.id == 809337381407948812: #announcements in main
+    return
+
   #Questions and answers upon $help
   
   async def adminquery():
@@ -91,8 +100,8 @@ async def on_message(message):
 
   msg_text = message.content.strip().lower()
 
-  keyword_1 = ['interview', 'when']
-  keyword_1a = ['interview', 'what', 'time']
+  #keyword_1 = ['interview', 'when']
+  #keyword_1a = ['interview', 'what', 'time']
   keyword_2 = ['coding', 'test', 'times']
   keyword_3 = ['eligible', 'join']
   keyword_4 = ['minimum', 'join', 'qualification']
@@ -110,10 +119,17 @@ async def on_message(message):
   keyword_16 = ['registration', 'fees']
   keyword_17 = ['practice', 'coding test']
   keyword_18 = ['coding test', 'difficult']
-  if all(word in msg_text for word in keyword_1):
-    await message.channel.send("> Your will receive a call within 48 hours of booking your interview on the website. If you have not, then you can then ping the staff here!")
-  if all(word in msg_text for word in keyword_1a):
-    await message.channel.send("> Your will receive a call within 48 hours of booking your interview on the website. If you have not, then you can then ping the staff here!")
+  keyword_19 = ['13th May']
+  keyword_20 = ['projects']
+  keyword_21 = ['educators', 'instructors']
+  keyword_22 = ['curriculum']
+  keyword_23 = ['how', 'many', 'questions', 'coding test']
+  keyword_24 = ['webcam']
+  keyword_25 = ['list', 'hiring']
+  #if all(word in msg_text for word in keyword_1):
+    #await message.channel.send("> Your will receive a call within 48 hours of booking your interview on the website. If you have not, then you can then ping the staff here!")
+  #if all(word in msg_text for word in keyword_1a):
+    #await message.channel.send("> Your will receive a call within 48 hours of booking your interview on the website. If you have not, then you can then ping the staff here!")
   if all(word in msg_text for word in keyword_2):
     await message.channel.send("> Do not worry if you fail the coding test. We do not have any limit for the number of attempts. You will be able to re-attempt it after 7 days time until you pass it.")
   if all(word in msg_text for word in keyword_3):
@@ -125,7 +141,7 @@ async def on_message(message):
   if all(word in msg_text for word in keyword_6):
     await message.channel.send("> The course duration is 6 months.")
   if all(word in msg_text for word in keyword_7):
-    await message.channel.send("> The next batch is starting on May 19th!")
+    await message.channel.send("> The next batch is starting on May 18th!")
   if all(word in msg_text for word in keyword_8):
     await message.channel.send("> Terms and conditions are straight forward. We have a 12 month agreement with the student. Training goes on for the first 6 months. Placements start from the 3rd month onwards and goes on till the 12th month. The student starts paying only after they get placed above 5 LPA during these 12 months.")
   if all(word in msg_text for word in keyword_9):
@@ -133,9 +149,9 @@ async def on_message(message):
   if all(word in msg_text for word in keyword_10):
     await message.channel.send("> You can pay the fee upfront if you don't want to clear the tests.")
   if any(word in msg_text for word in keyword_11):
-    await message.channel.send("> No, it will not matter for course joining or even for placements. Companies coming for placement only look for your coding skills, which we, here a AccioJob teach you!")
+    await message.channel.send("> No, it will not matter for course joining or even for placements. Companies coming for placement only look for your coding skills, which we, here at AccioJob teach you!")
   if all(word in msg_text for word in keyword_12):
-    await message.channel.send("> Once you start the course with us and sign the ISA, you will have to pay us the course fee when you get placed in IT sector above 5 LPA, regardless of how you get placed.")
+    await message.channel.send("> Once you start the course with us and sign the ISA, you will have to pay us the course fee when you get placed in IT sector above 5 LPA. If you get placed in a non-IT company or below 5 LPA and you want to quit the Main Batch then you will have to pay the course fee.")
   if all(word in msg_text for word in keyword_13):
     await message.channel.send("> The timings for live classes are from 8 PM to 11 PM on weekdays. You will have to put in 2-3 hours of extra effort to get your assignment and learning done everyday. And we have soft skills practice sessions, contests and profile building on weekends.")
   if all(word in msg_text for word in keyword_14):
@@ -143,11 +159,25 @@ async def on_message(message):
   if all(word in msg_text for word in keyword_15):
     await message.channel.send("> You will need to spend at least 5-6 hours per day throughout the duration of the course.")
   if all(word in msg_text for word in keyword_16):
-    await message.channel.send("> You have two options for joining the course.If you are a graduate between 2018 and 2023, you will be eligible to join our batch by the Pay after placement option. If you are a 2017 or earlier graduate then you will have to go with the pay upfront option. The registration fee for pay upfront option is Rs. 4,999. Whereas there is no registration fee for the pay after placement option.")
+    await message.channel.send("The fee structure for the Pay Upfront option is as follows: \n> - INR 4,999 registration fees payable now + INR 45,000 + GST payable after 7 day trial \n> - 100% refund of registration fees if not satisfied after the 7-day trial.")
   if all(word in msg_text for word in keyword_17):
     await message.channel.send("> If you have completed all the modules thoroughly and written programs on your own then you will be able to clear the coding test fairly well! If you want more practice questions then you can refer to this link https://expensive-amount-815.notion.site/Further-Practice-Questions-AccioJob-Modules-93a32105a2d8496fb35149e7ef9216f8 and you can even practice more on Hackerrank/Leetcode.")
   if all(word in msg_text for word in keyword_18):
-    await message.channel.send("> If you have solved all module questions thoroughly and practiced some more questions on your own then you should be able to clear the coding test!")
+    await message.channel.send("> If you have solved all module questions thoroughly and practiced some more questions on your own then you should be able to clear the coding test! If you want more practice questions then you can refer to this link https://expensive-amount-815.notion.site/Further-Practice-Questions-AccioJob-Modules-93a32105a2d8496fb35149e7ef9216f8 and you can even practice more on Hackerrank/Leetcode.")
+  if all(word in msg_text for word in keyword_19):
+    await message.channel.send("> We have closed interviews and admittance to the April 27th Batch. \n> You will be able to schedule your interview from May 13th onwards for the May 18th Main Batch. \n> Till then you can practice some coding by yourself from this website https://expensive-amount-815.notion.site/Further-Practice-Questions-AccioJob-Modules-93a32105a2d8496fb35149e7ef9216f8 and you can even practice more on Hackerrank/Leetcode.")
+  if all(word in msg_text for word in keyword_20):
+    await message.channel.send("> There will be a variety of projects! you'll be working on atleast 2 projects on DSA and a lot of projects on front-end, you'll have a repository of projects you can choose to work on post selection in the main batch.")
+  if any(word in msg_text for word in keyword_21):
+    await message.channel.send("> You'll have 2 instructors one for main class and the other for doubt class!")
+  if all(word in msg_text for word in keyword_22):
+    await message.channel.send("> The course curriculum is: \n> First 2 months we teach you DSA in Java, OOPS, SQL, System Design \n> Next 2 month we teach you front end webdev - HTML, CSS, Javascript, ReactJS and Redux \n> The last 2 months we teach you back end webdev - NodeJS, Express and MongoDB. \n> This covers the DSA and Full stack development!")
+  if all(word in msg_text for word in keyword_23):
+    await message.channel.send("> There will be 2 questions in the coding test to be solved within an hour. \n> You need to clear 50% i.e., all test cases of at least 1 question at least or half test cases of both the questions.")
+  if all(word in msg_text for word in keyword_24):
+    await message.channel.send("> You will need a webcam for the coding test and the interview.")
+  if all(word in msg_text for word in keyword_25):
+    await message.channel.send("> We have more 200 hiring partners, most of these are product based, we also have some service based companies that hire from us. You can find a sample list of hiring partners on our website. \n> Some partners are- Thoughworks, Gainsight, Visa, Converj, Paytm, Maersk, Tata Digital, Makemytrip, salesforce, etc.")
 
 keep_alive()
 client.run(os.getenv('token'))
