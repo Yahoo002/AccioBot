@@ -1,5 +1,5 @@
 
-![Logo](https://cdn.discordapp.com/attachments/776703337310847000/1056098855122370570/image.png)
+[![Logo](https://cdn.discordapp.com/attachments/776703337310847000/1056098855122370570/image.png)](https://acciojob.com/)
 
 
 [AccioJob](https://acciojob.com/) is an ed-tech startup run by IIT Delhi Alumni and backed by Y Combinator.
