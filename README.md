@@ -11,7 +11,7 @@ We provide the best learning platform for students to start a career in Software
 
 ## 🚀 About Me
 
-- I actively searche through thousands of messages in real time and provies a response with no delay to the users.
+- I actively search thousands of messages in real time and provies a response with no delay to the users.
 
 - I serve over 50,000 users on AccioJob Community Servers.
 
