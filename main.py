@@ -150,6 +150,20 @@ async def on_message(message):
   keyword_31 = ['timings', 'weekend']
   keyword_32 = ['precourse', 'next']
   keyword_33 = ['batch manager', 'dont','didnt']
+  Keyword_34 = [ 'Help-bot']
+  Keyword_35 = ['How-bot']
+  Keyword_36 = ['Detail-bot']
+  Keyword_37 = ['hard-refresh-bot']
+  Keyword_38 = ['Assignment-doubts-bot']
+  Keyword_39 = ['DM-bot']
+  Keyword_40 = ['class-link-bot']
+  Keyword_41 = ['Details-bot']
+  Keyword_42 = ['Syllabus-bot']
+  Keyword_43 = ['Interviewer-missing-bot']
+  Keyword_44 = ['Cant-book-interview-bot']
+  Keyword_45 = ['Open-Doubt-Session-bot']
+  Keyword_46 = ['timing-bot']
+  Keyword_47 = ['Assignment-doubts-channel-bot']
   
   
   #if all(word in msg_text for word in keyword_1):
@@ -223,7 +237,42 @@ async def on_message(message):
       await message.channel.send("> The next AccioJob Precourse is starting from September 3.")
       if all(word in msg_text for word in keyword_33):
         await message.channel.send("> Your batch manager will contact you first after that you can contact him.")
-    if all(word)
+        
+     if all(word in msg_text for word in keyword_34): 
+      await message.channel.send("> Is there anything else I can help you with?")
+    if all(word in msg_text for word in keyword_35):
+      await message.channel.send("> Hi there, how can I help you?")    if all(word in msg_text for word in keyword_36):
+      await message.channel.send("> Please DM us your age and the year you graduated. These details will help us to assist you further.")
+      if all(word in msg_text for word in keyword_37):
+      await message.channel.send("> Please hard refresh your page using *Ctrl* and *Shift* and then press *R* on your keyboard.This would help you with your concern. In case, you are still unable to resolve the issue, please get back to us here again")
+      if all(word in msg_text for word in keyword_38):
+      await message.channel.send("> You can refer to our channel #assignment-doubts for code relate queries. Our tech buddy will assist you there.")
+      if all(word in msg_text for word in keyword_39):
+      await message.channel.send("< We have sent you a DM in this regard. Please check.")
+
+        if all(word in msg_text for word in keyword_40):
+      await message.channel.send( < "Hey there!The FREE LIVE class starts at 8 pm Click here to join: http://precourse.acciojob.com/join-live-class ")
+
+      if all(word in msg_text for word in keyword_41):
+      await message.channel.send("< We offer an online placement guaranteed full stack web development course, after which we help the students in getting placed upto 41lpa. The program is divided into 3 sections, DSA, Frontend and Backend, all these 3 sections will be covered in Java and JavaScript.")
+
+        if all(word in msg_text for word in keyword_42):
+      await message.channel.send("<Please check your DM. We have shared the course Syllabus there. ")
+
+        if all(word in msg_text for word in keyword_43):
+      await message.channel.send("< Please don't worry. You shall be contacted within 24 hours regarding the same. ")
+
+        if all(word in msg_text for word in keyword_44):
+      await message.channel.send("< Please join our open doubt session between 6PM to 8PM to clear your doubts and queries related to our program.")
+      if all(word in msg_text for word in keyword_45):
+      await message.channel.send("<Classes will be Monday - Friday (8pm - 11pm) live ")
+
+      if all(word in msg_text for word in keyword_46):
+      await message.channel.send("< Hello everyone! Keep sharing all your Coding Doubts here! Our Tech Team will soon be resolving and responding to all your queries.")
+      
+      
+      
+        
 
 
 
