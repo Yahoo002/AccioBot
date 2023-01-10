@@ -148,22 +148,21 @@ async def on_message(message):
   keyword_29 = ['interview', 'questions']
   keyword_30 = ['register', 'marathon']
   keyword_31 = ['timings', 'weekend']
-  keyword_32 = ['precourse', 'next']
-  keyword_33 = ['batch manager', 'dont','didnt']
-  keyword_34 = [ 'Help-bot']
-  keyword_35 = ['How-bot']
-  keyword_36 = ['Detail-bot']
-  keyword_37 = ['hard-refresh-bot']
-  keyword_38 = ['Assignment-doubts-bot']
-  keyword_39 = ['DM-bot']
-  keyword_40 = ['class-link-bot']
-  keyword_41 = ['Details-bot']
-  keyword_42 = ['Syllabus-bot']
-  keyword_43 = ['Interviewer-missing-bot']
-  keyword_44 = ['Cant-book-interview-bot']
-  keyword_45 = ['Open-Doubt-Session-bot']
-  keyword_46 = ['timing-bot']
-  keyword_47 = ['Assignment-doubts-channel-bot']
+  keyword_32 = ['website', 'not', 'working']
+  # keyword_33 = ['batch manager', 'dont','didnt']
+  keyword_34 = ['help', 'bot']
+  keyword_35 = ['how', 'bot']
+  keyword_36 = ['lorem ipsum lorem']
+  keyword_37 = ['hard', 'refresh']
+  keyword_38 = ['assignment', 'doubt']
+  keyword_39 = ['lorem ipsum lorem']
+  keyword_40 = ['class', 'link']
+  keyword_41 = ['detail', 'course']
+  keyword_42 = ['lorem ipsum lorem']
+  keyword_43 = ['interview', 'missing']
+  keyword_44 = ['open','doubt', 'session']
+  keyword_45 = ['timing', 'class']
+  keyword_46 = ['lorem ipsum lorem']
   
   
   #if all(word in msg_text for word in keyword_1):
@@ -230,47 +229,48 @@ async def on_message(message):
     await message.channel.send("> Once you pass the coding test, you will be able to book an interview. A person from Acciojob will contact you and schedule your interview. During the interview: \n> 1. There will be some questions regarding your previous experience and some to judge your dedication and consistency. \n> 2. Then it will be followed by a coding round in which we will test your coding skills. \n\n> (Note: if you have watched our videos and completed all the questions in the modules, then you won't be facing any issues in the coding round.) \n\n> And once you pass the interview, you will be placed in the next Main Batch!")
   if all(word in msg_text for word in keyword_30):
     await message.channel.send("> There is no registration as such. \nYou can just solve the coding questions given the day before in <#958972904345837598> and clear any doubts you have when the mentor shows how to solve the problem.")
-    if all(word in msg_text for word in keyword_31):
-      await message.channel.send("> There are no classes on weekends. We usually have weekly coding contests, profile building and soft skills sessions on weekends.")
+  if all(word in msg_text for word in keyword_31):
+    await message.channel.send("> There are no classes on weekends. We usually have weekly coding contests, profile building and soft skills sessions on weekends.")
 
-    if all(word in msg_text for word in keyword_32):
-      await message.channel.send("> The next AccioJob Precourse is starting from September 3.")
-      if all(word in msg_text for word in keyword_33):
-        await message.channel.send("> Your batch manager will contact you first after that you can contact him.")
-        
-    if all(word in msg_text for word in keyword_34):
-       await message.channel.send("> Is there anything else I can help you with?")
-    if all(word in msg_text for word in keyword_35):
-      await message.channel.send("> Hi there, how can I help you?")
+  if all(word in msg_text for word in keyword_32):
+    await message.channel.send("> Hey! Please hard refresh the page by pressing ctrl+shift+r.")
+
       
-    if all(word in msg_text for word in keyword_36):
-      await message.channel.send("> Please DM us your age and the year you graduated. These details will help us to assist you further.")
-      if all(word in msg_text for word in keyword_37):
-        await message.channel.send("> Please hard refresh your page using *Ctrl* and *Shift* and then press *R* on your keyboard.This would help you with your concern. In case, you are still unable to resolve the issue, please get back to us here again")
-      if all(word in msg_text for word in keyword_38):
-        await message.channel.send("> You can refer to our channel #assignment-doubts for code relate queries. Our tech buddy will assist you there.")
-      if all(word in msg_text for word in keyword_39):
-        await message.channel.send("< We have sent you a DM in this regard. Please check.")
+        
+        
+  if all(word in msg_text for word in keyword_34):
+    await message.channel.send("> Is there anything else I can help you with? :D")
+  if all(word in msg_text for word in keyword_35):
+    await message.channel.send("> Hi there, how can I help you? :D")
+      
+  if all(word in msg_text for word in keyword_36):
+    await message.channel.send("> Please DM <@!952862300572893234> your age and the year you graduated. These details will help us to assist you further.")
+  if all(word in msg_text for word in keyword_37):
+    await message.channel.send("> Please hard refresh your page using *Ctrl* and *Shift* and then press *R* on your keyboard.This would help you with your concern. In case, you are still unable to resolve the issue, please get back to us here again.")
+  if all(word in msg_text for word in keyword_38):
+    await message.channel.send("> You can refer to our channel <#977500173393625128> for code related queries. Our tech buddy will assist you there.")
+  if all(word in msg_text for word in keyword_39):
+    await message.channel.send("> We have sent you a DM in this regard. Please check.")
 
-        if all(word in msg_text for word in keyword_40):
-          await message.channel.send("> Hey there!The FREE LIVE class starts at 8 pm Click here to join: http://precourse.acciojob.com/join-live-class ")
+  if all(word in msg_text for word in keyword_40):
+    await message.channel.send("> Hey there!The FREE LIVE class starts at 8 pm Click here to join: http://precourse.acciojob.com/join-live-class.")
 
-      if all(word in msg_text for word in keyword_41):
-        await message.channel.send("> We offer an online placement guaranteed full stack web development course, after which we help the students in getting placed upto 41lpa. The program is divided into 3 sections, DSA, Frontend and Backend, all these 3 sections will be covered in Java and JavaScript.")
+  if all(word in msg_text for word in keyword_41):
+    await message.channel.send("> We offer an online placement guaranteed full stack web development course, after which we help the students in getting placed upto 41lpa. The program is divided into 3 sections, DSA, Frontend and Backend, all these 3 sections will be covered in Java and JavaScript.")
 
-        if all(word in msg_text for word in keyword_42):
-          await message.channel.send("> Please check your DM. We have shared the course Syllabus there. ")
+  if all(word in msg_text for word in keyword_42):
+    await message.channel.send("> Please check your DM. We have shared the course Syllabus there. ")
 
-        if all(word in msg_text for word in keyword_43):
-          await message.channel.send("> Please don't worry. You shall be contacted within 24 hours regarding the same. ")
+  if all(word in msg_text for word in keyword_43):
+    await message.channel.send("> Please don't worry. You shall be contacted within 24 hours regarding the same. ")
 
-        if all(word in msg_text for word in keyword_44):
-          await message.channel.send("> Please join our open doubt session between 6PM to 8PM to clear your doubts and queries related to our program.")
-      if all(word in msg_text for word in keyword_45):
-        await message.channel.send("> Classes will be Monday - Friday (8pm - 11pm) live ")
+  if all(word in msg_text for word in keyword_44):
+    await message.channel.send("> Please join our open doubt session between 6PM to 8PM to clear your doubts and queries related to our program.")
+  if all(word in msg_text for word in keyword_45):
+    await message.channel.send("> Classes will be Monday - Friday (8pm - 11pm) live.")
 
-      if all(word in msg_text for word in keyword_46):
-        await message.channel.send("> Hello everyone! Keep sharing all your Coding Doubts here! Our Tech Team will soon be resolving and responding to all your queries.")
+  if all(word in msg_text for word in keyword_46):
+    await message.channel.send("> Hello everyone! Keep sharing all your Coding Doubts here! Our Tech Team will soon be resolving and responding to all your queries.")
       
       
 
